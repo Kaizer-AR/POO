@@ -1,0 +1,97 @@
+package bdd;
+import java.util.Scanner;
+import java.sql.*;
+
+
+public class BDD {
+
+
+    public static void main(String[] args) {
+       
+        String passwordBien = "ipchile";
+   
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("*Biblioteca Villa Dorada*");
+        System.out.println("1.Administrador");
+        System.out.println("2.Usuario");
+        System.out.println("Inserte opcion: ");
+        int optionUser = scanner.nextInt();
+        switch(optionUser){
+            case 1:
+                System.out.println("-------------------------");
+                System.out.println("*Biblioteca Villa Dorada*");
+                System.out.println("ADMINISTRADOR");
+                System.out.println("1.Registrar Entrega");
+                System.out.println("2.Agregar Libro");
+                String agregarL = scanner.next();
+                
+                System.out.println("3.Eliminar Libro");
+                System.out.println("4.Registro de Libros Prestados");
+                System.out.println("4.Salir");
+                System.out.println("Inserte opcion: ");
+                int optionAdmin = scanner.nextInt();
+                switch(optionAdmin){
+                    case 1: 
+                        System.out.println("Biblioteca Villa Dorada");
+                        System.out.println("REGISTRAR ENTREGA");
+                        System.out.println("");
+                        
+                        break;
+                    case 2:
+                        System.out.println("Biblioteca Villa Dorada");
+                        System.out.println("AGREGAR LIBRO");
+                        System.out.println("");
+                        
+                        break;
+                }
+                break;
+            case 2:
+                System.out.println("-------------------------");
+                System.out.println("*Biblioteca Villa Dorada*");
+                System.out.println("USUARIO");
+                System.out.println("Ingrese sus Datos");
+                System.out.println("Nombre: ");
+                String nombre = scanner.next();
+                System.out.println("Rut:    ");
+                int rut = scanner.nextInt();
+                System.out.println("Carrera");
+                int carrera = scanner.nextInt();
+                System.out.println("Telefono: ");
+                int telefono = scanner.nextInt();
+                System.out.println("Tipo de usuario: ");
+                System.out.println("1. Alumno");
+                System.out.println("2. Profesor");
+                System.out.println("Inserte opcion: ");
+                int optionAoP = scanner.nextInt();
+                switch(optionAoP){
+                    case 1:
+                        break;
+                       
+                    case 2:
+                        System.out.println("*Biblioteca Villa Dorada*");
+                        System.out.println("Ingrese contraseña: ");
+                        String password = scanner.next();
+                        if(password.equalsIgnoreCase(passwordBien)){
+                            System.out.println("Contraseña Correcta");
+                        } else {
+                            System.out.println("Contraseña Incorrecta");                          
+                        }
+                        break;
+                        
+                    default: break;
+                }
+            default:  break;  
+        }
+            System.out.println("*Biblioteca Villa Dorada*");
+            System.out.println("1.Buscar por Nombre");
+            System.out.println("2.Buscar por Genero");
+            System.out.println("3.Buscar por Autor");
+            System.out.println("4.Buscar por ISBN");
+            System.out.println("5.Salir");
+            System.out.println("Inserte opcion: ");
+            int busqueda = scanner.nextInt();
+
+   
+       
+    }
+}
